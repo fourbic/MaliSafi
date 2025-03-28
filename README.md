@@ -47,7 +47,7 @@ MaliSafi is a web application that uses AI agents to find, analyze, and report o
 
 1. Start the Flask application:
    ```
-   flask run
+   realEstate_MultiAgent_Crew.ipynb
    ```
 
 2. Open your browser and navigate to:
@@ -89,4 +89,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-This project uses the CrewAI framework for multi-agent orchestration and is inspired by the need for better AI-powered analysis tools.
+This project uses the CrewAI framework for multi-agent orchestration.

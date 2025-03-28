@@ -15,7 +15,8 @@ app.secret_key = os.getenv('SECRET_KEY', 'malisafi-development-key')
 PROPERTY_URLS = [
     "https://www.knightfrank.com/property-for-sale/kenya",
     "https://www.buyrentkenya.com/property-for-sale",
-    "https://www.pamgolding.co.za/property-search/properties-for-sale-kenya/119"
+    "https://www.pamgolding.co.za/property-search/properties-for-sale-kenya/119",
+    "https://www.hassconsult.com/rentresidential",
 ]
 
 # Sample search cards for Kenya
