@@ -1,0 +1,8 @@
+modules = ["python-3.12", "c-clang14", "cpp-clang14"]
+run = "./run_dev.sh"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "./run_dev.sh"]
