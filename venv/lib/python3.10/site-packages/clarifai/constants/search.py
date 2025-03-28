@@ -1,0 +1,3 @@
+DEFAULT_TOP_K = 10
+DEFAULT_SEARCH_METRIC = "euclidean"
+DEFAULT_SEARCH_ALGORITHM = "nearest_neighbor"
