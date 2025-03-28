@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaliSafi - Kenyan Property Intelligence</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="MaliSafi">
+            <span>MaliSafi</span>
+        </div>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <button class="cta-button">Contact Us</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Your AI real estate assistant for Kenyan properties</h1>
+            <div class="search-container">
+                <form action="{{ url_for('search') }}" method="POST">
+                    <input type="text" name="city" placeholder="City (e.g., Nairobi)">
+                    <input type="text" name="property_type" placeholder="Property Type (e.g., Apartments)">
+                    <input type="text" name="max_price" placeholder="Maximum Price (e.g., 10,000,000)">
+                    <button type="submit">Search Properties</button>
+                </form>
+            </div>
+        </section>
+        
+        <!-- Flash messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <section class="popular-searches">
+            <h2>Popular Searches</h2>
+            <div class="card-grid">
+                {% for card in search_cards %}
+                <div class="search-card">
+                    <form action="{{ url_for('search') }}" method="POST">
+                        <h3>{{ card.city }}</h3>
+                        <p>{{ card.property_type }}</p>
+                        <p>KES {{ card.max_price }}</p>
+                        <input type="hidden" name="city" value="{{ card.city }}">
+                        <input type="hidden" name="property_type" value="{{ card.property_type }}">
+                        <input type="hidden" name="max_price" value="{{ card.max_price }}">
+                        <button type="submit">View Properties</button>
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 MaliSafi - AI Powered Real Estate Intelligence</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 

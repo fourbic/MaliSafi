@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MaliSafi - Kenyan Property Intelligence</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="MaliSafi">
+            <span>MaliSafi</span>
+        </div>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <button class="cta-button">Contact Us</button>
+        </nav>
+    </header>
+    
+    <main class="about-page">
+        <section class="about-content">
+            <h1>About MaliSafi</h1>
+            
+            <div class="about-card">
+                <h2>Our Mission</h2>
+                <p>MaliSafi uses advanced AI to help you find the perfect property in Kenya. Our name combines "Mali" (property in Swahili) and "Safi" (clean/clear), reflecting our mission to bring clarity to your property search.</p>
+            </div>
+            
+            <div class="about-card">
+                <h2>How It Works</h2>
+                <p>MaliSafi employs a team of specialized AI agents that work together to find, analyze, and report on properties that match your criteria:</p>
+                <ul>
+                    <li><strong>Property Researcher:</strong> Searches across multiple sources to find properties matching your requirements</li>
+                    <li><strong>Market Analyst:</strong> Evaluates investment potential and comparative value</li>
+                    <li><strong>Location Specialist:</strong> Assesses neighborhood trends and geographic insights</li>
+                    <li><strong>Report Editor:</strong> Compiles all findings into a comprehensive, easy-to-understand report</li>
+                </ul>
+            </div>
+            
+            <div class="about-card">
+                <h2>Our Coverage</h2>
+                <p>We currently cover major Kenyan cities including:</p>
+                <ul>
+                    <li>Nairobi</li>
+                    <li>Mombasa</li>
+                    <li>Kisumu</li>
+                    <li>Nakuru</li>
+                    <li>Eldoret</li>
+                    <li>Malindi</li>
+                </ul>
+                <p>With property types ranging from residential apartments to commercial spaces and vacation homes.</p>
+            </div>
+            
+            <div class="about-card">
+                <h2>Technology</h2>
+                <p>MaliSafi is built using a combination of technologies:</p>
+                <ul>
+                    <li>CrewAI for multi-agent orchestration</li>
+                    <li>Large Language Models for property analysis</li>
+                    <li>Web scraping tools for real-time data collection</li>
+                    <li>Flask web framework for the application</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 MaliSafi - AI Powered Real Estate Intelligence</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 

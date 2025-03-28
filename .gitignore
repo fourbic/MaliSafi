@@ -1,0 +1,112 @@
+# Dependency directories
+node_modules/
+vendor/
+bower_components/
+jspm_packages/
+
+# Distribution directories
+dist/
+build/
+out/
+public/dist/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+.jest/
+__tests__/__coverage__/
+
+# Build tools
+.gradle/
+.maven/
+target/
+
+# Package files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.tgz
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# Caches
+.cache/
+.npm/
+.eslintcache
+.stylelintcache
+.sass-cache/
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# Generated files
+generated/
+*.generated.*
+
+# Mobile development
+.expo/
+.expo-shared/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Serverless
+.serverless/
+.dynamodb/
+
+# Documentation
+docs/_site/
+docs/.jekyll-cache/
+docs/.jekyll-metadata
+
+# OS specific
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# Misc
+.history/
+.vercel
+.next/

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaliSafi - Property Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="MaliSafi">
+            <span>MaliSafi</span>
+        </div>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <button class="cta-button">Contact Us</button>
+        </nav>
+    </header>
+    
+    <main class="results-page">
+        <div class="search-summary">
+            <div class="search-details">
+                <h1>Properties in {{ city }}</h1>
+                <p>Showing {{ property_type }} under KES {{ max_price }}</p>
+            </div>
+            <a href="{{ url_for('index') }}" class="back-button">New Search</a>
+        </div>
+        
+        <!-- Loading indicator (hidden by default, shown during analysis) -->
+        <div id="loading" class="loading-overlay" style="display: none;">
+            <div class="spinner"></div>
+            <p>Our AI agents are analyzing properties in {{ city }}...</p>
+        </div>
+        
+        <div class="report-container">
+            {{ report|safe }}
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 MaliSafi - AI Powered Real Estate Intelligence</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
