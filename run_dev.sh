@@ -14,6 +14,7 @@ source venv/bin/activate
 
 # Install or update dependencies
 echo "Installing dependencies..."
+pip install flask markdown2 python-dotenv requests openai crewai langchain_community crewai '[tools]'
 pip install -r requirements.txt
 
 # Run the application in development mode
