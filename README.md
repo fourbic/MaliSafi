@@ -1,7 +1,6 @@
-# MaliSafi - AI Powered Kenyan Real Estate Intelligence
+# MaliSafi - Multi AI Agent Crew => Real Estate
 
-MaliSafi is a web application that uses AI agents to find, analyze, and report on property opportunities in Kenya. The name combines "Mali" (property in Swahili) and "Safi" (clean/clear), reflecting our mission to bring clarity to your property search.
-
+MaliSafi is a web application that uses AI agents to find, analyze, and report on property.
 ## Features
 
 - AI-powered property search across multiple real estate websites
@@ -45,12 +44,13 @@ MaliSafi is a web application that uses AI agents to find, analyze, and report o
 
 ## Usage
 
-1. Start the Flask application:
+1. Test it out on the notebook and for a webapp the project uses a Flask application:
+   Notebook can be found here 
    ```
-   realEstate_MultiAgent_Crew.ipynb
+   /notebook/realEstate_MultiAgent_Crew.ipynb
    ```
 
-2. Open your browser and navigate to:
+2. Flask runs on your browser and navigate to:
    ```
    http://localhost:5000
    ```

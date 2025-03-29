@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-import markdown
+from markdown import markdown
 import os
 import json
 from dotenv import load_dotenv
@@ -58,7 +58,7 @@ def search():
         )
         
         # Convert markdown to HTML for display
-        report_html = markdown.markdown(report_markdown)
+        report_html = markdown(report_markdown)
         
         return render_template(
             'results.html', 

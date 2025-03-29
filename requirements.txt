@@ -3,6 +3,8 @@ markdown>=3.0.0
 python-dotenv>=1.0.0
 requests>=2.30.0
 crewai==0.28.8
+crewai-tools>=0.0.1
 langchain_community==0.0.29
 openai>=1.13.3,<2.0.0
-firecrawl-py 'crewai[tools]'
+firecrawl-py>=0.1.0
+pyarrow==14.0.1

@@ -1,9 +1,12 @@
 from crewai import Agent, Task, Crew
-from crewai_tools import FirecrawlScrapeWebsiteTool
+# from langchain_community.tools import DuckDuckGoSearchRun
+# from crewai_tools import FirecrawlScrapeWebsiteTool
+from crewai_tools import ScrapeWebsiteTool
 from typing import List
 import os
 import json
 from datetime import datetime
+
 
 class RealEstateAgentSystem:
     def __init__(self):
@@ -42,7 +45,7 @@ class RealEstateAgentSystem:
             description=f"Search for {property_type} properties in {city} under {max_price} from these sources: {property_urls}. Focus only on properties matching the exact criteria.",
             expected_output="Structured data of 5-10 relevant properties with complete details including price, location, and features.",
             agent=self.property_researcher,
-            tools=[FirecrawlScrapeWebsiteTool()],
+            tools=[ScrapeWebsiteTool()],
         )
         
         self.market_analysis_task = Task(

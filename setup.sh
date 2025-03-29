@@ -35,5 +35,5 @@ chmod +x deploy_prod.sh
 
 echo "Setup complete! To run the application:"
 echo "1. Update the .env file with your OpenAI API key"
-echo "2. Run 'python app.py'"
+echo "2. Run 'python3 app.py'"
 echo "3. Open http://localhost:5000 in your browser"

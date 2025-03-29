@@ -17,11 +17,12 @@ source venv/bin/activate
 # Install or update dependencies
 echo "Installing dependencies..."
 pip install  'crewai[tools]'
+
 pip install -r requirements.txt
 
 # Run the application in development mode
 echo "Starting development server..."
-python app.py
+python3 app.py
 
 # Deactivate virtual environment on exit
 deactivate 
