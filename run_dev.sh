@@ -12,16 +12,14 @@ fi
 # Activate virtual environment
 source venv/bin/activate
 
-
-
 # Install or update dependencies
 echo "Installing dependencies..."
 pip install crewai==0.28.8 langchain_community==0.0.29 firecrawl-py 'crewai[tools]'
 pip install -r requirements.txt
 
-# Run the application in development mode
-echo "Starting development server..."
-python3 app.py
+# # Run the application in development mode
+# echo "Starting development server..."
+# python3 app.py
 
-# Deactivate virtual environment on exit
-deactivate 
+# # Deactivate virtual environment on exit
+# deactivate 
