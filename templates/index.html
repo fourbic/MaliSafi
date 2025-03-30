@@ -13,6 +13,12 @@
         <img src="{{ url_for('static', filename='img/malisafi_hero_bg.jpg') }}" alt="Modern Apartment Building" class="hero-image">
         <div class="hero-overlay"></div>
         
+        <!-- Logo -->
+        <div class="logo" style="position: absolute; top: 2rem; left: 2rem; z-index: 10;">
+            <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="MaliSafi">
+            <span>MaliSafi</span>
+        </div>
+        
         <!-- Hero Content -->
         <div class="hero-content">
             <h1 class="animate-fade-in">
@@ -55,6 +61,30 @@
                 </button>
             </form>
         </div>
+
+        <!-- Popular Searches Section -->
+        <div class="popular-searches">
+            <div class="container">
+                <h2>Popular Searches</h2>
+                <div class="card-grid">
+                    {% for search in search_cards %}
+                    <div class="search-card animate-fade-in">
+                        <h3>{{ search.city }} - {{ search.property_type }}</h3>
+                        <p>Discover prime properties in {{ search.city }}</p>
+                        <p style="color: var(--primary-color); font-weight: 500;">Up to KES {{ search.max_price }}</p>
+                        <form action="{{ url_for('search') }}" method="post" class="property-search-form">
+                            <input type="hidden" name="city" value="{{ search.city }}">
+                            <input type="hidden" name="property_type" value="{{ search.property_type }}">
+                            <input type="hidden" name="max_price" value="{{ search.max_price }}">
+                            <button type="submit" class="search-action">
+                                View Properties
+                            </button>
+                        </form>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Loading Overlay -->
@@ -78,30 +108,6 @@
             <p class="animate-fade-in" style="font-size: 0.9rem; margin-top: 0.5rem;">This may take a few moments</p>
         </div>
     </div>
-
-    <!-- Popular Searches Section -->
-    <section class="popular-searches">
-        <div class="container">
-            <h2>Popular Searches</h2>
-            <div class="card-grid">
-                {% for search in search_cards %}
-                <div class="search-card animate-fade-in">
-                    <h3>{{ search.city }} - {{ search.property_type }}</h3>
-                    <p>Discover prime properties in {{ search.city }}</p>
-                    <p style="color: var(--primary-color); font-weight: 500;">Up to KES {{ search.max_price }}</p>
-                    <form action="{{ url_for('search') }}" method="post" class="property-search-form">
-                        <input type="hidden" name="city" value="{{ search.city }}">
-                        <input type="hidden" name="property_type" value="{{ search.property_type }}">
-                        <input type="hidden" name="max_price" value="{{ search.max_price }}">
-                        <button type="submit" class="search-action">
-                            View Properties
-                        </button>
-                    </form>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
 
     <!-- Flash Messages -->
     {% with messages = get_flashed_messages(with_categories=true) %}
