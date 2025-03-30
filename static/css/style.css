@@ -276,8 +276,8 @@ header {
 }
 
 .logo-text {
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 1rem;
+    font-weight: 200;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     letter-spacing: 0.05em;
@@ -299,7 +299,7 @@ header {
 }
 
 .hero-logo .logo-text {
-    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-size: clamp(1rem, 4vw, 1.6rem);
 }
 
 .tagline {
