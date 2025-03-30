@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-import markdown2
+from markdown import markdown
 import os
 import json
 from dotenv import load_dotenv
@@ -11,22 +11,22 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY', 'malisafi-development-key')
 
-# Default property URLs
+# Core property URLs
 PROPERTY_URLS = [
     "https://www.knightfrank.com/property-for-sale/kenya",
-    "https://www.buyrentkenya.com/property-for-sale",
+    # "https://www.buyrentkenya.com/property-for-sale",
     "https://www.pamgolding.co.za/property-search/properties-for-sale-kenya/119",
-    "https://www.hassconsult.com/rentresidential",
+    "https://www.hassconsult.com/rentresidential"
 ]
 
-# Sample search cards for Kenya
+# Key search options
 SEARCH_CARDS = [
-    {"city": "Nairobi", "property_type": "Apartments", "max_price": "10,000,000"},
-    {"city": "Mombasa", "property_type": "Beach Houses", "max_price": "25,000,000"},
-    {"city": "Kisumu", "property_type": "Land", "max_price": "5,000,000"},
-    {"city": "Nakuru", "property_type": "Family Homes", "max_price": "8,000,000"},
-    {"city": "Eldoret", "property_type": "Commercial Spaces", "max_price": "15,000,000"},
-    {"city": "Malindi", "property_type": "Vacation Homes", "max_price": "20,000,000"}
+    {"city": "Nairobi", "property_type": "Apartments", "max_price": "10M"},
+    {"city": "Mombasa", "property_type": "Beach Houses", "max_price": "25M"},
+    {"city": "Kisumu", "property_type": "Land", "max_price": "5M"},
+    {"city": "Nakuru", "property_type": "Family Homes", "max_price": "8M"},
+    {"city": "Eldoret", "property_type": "Commercial Spaces", "max_price": "15M"},
+    {"city": "Malindi", "property_type": "Vacation Homes", "max_price": "2M"}
 ]
 
 @app.route('/')
@@ -58,7 +58,7 @@ def search():
         )
         
         # Convert markdown to HTML for display
-        report_html = markdown2.markdown(report_markdown)
+        report_html = markdown(report_markdown)
         
         return render_template(
             'results.html', 

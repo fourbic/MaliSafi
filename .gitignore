@@ -110,3 +110,15 @@ desktop.ini
 .history/
 .vercel
 .next/
+
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+.venv/
+.virtualenv/
+virtualenv/
+*.pyc
+__pycache__/
