@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MaliSafi - Smart Real Estate Search</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
 </head>
 <body>
     <!-- Hero Section -->
@@ -13,10 +14,11 @@
         <img src="{{ url_for('static', filename='img/malisafi_hero_bg.jpg') }}" alt="Modern Apartment Building" class="hero-image">
         <div class="hero-overlay"></div>
         
-        <!-- Logo -->
-        <div class="logo" style="position: absolute; top: 2rem; left: 2rem; z-index: 10;">
-            <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="MaliSafi">
-            <span>MaliSafi</span>
+        <!-- Hero Logo -->
+        <div class="hero-logo">
+            <div>
+                <div class="logo-text">MaliSafi</div>
+            </div>
         </div>
         
         <!-- Hero Content -->

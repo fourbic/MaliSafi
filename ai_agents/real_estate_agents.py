@@ -101,7 +101,7 @@ class TaskFactory:
     def create_search_task(agent, city, property_type, max_price, urls):
         return Task(
             description=f"Find {property_type} in {city} under {max_price} from: {urls}",
-            expected_output="3-5 relevant properties with key details",
+            expected_output="max of 3 relevant properties with key details",
             agent=agent,
             tools=[ScrapeWebsiteTool()],
             output_json=PropertyData

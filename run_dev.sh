@@ -16,8 +16,7 @@ source venv/bin/activate
 
 # Install or update dependencies
 echo "Installing dependencies..."
-pip install  'crewai[tools]'
-
+pip install crewai==0.28.8 langchain_community==0.0.29 firecrawl-py 'crewai[tools]'
 pip install -r requirements.txt
 
 # Run the application in development mode
